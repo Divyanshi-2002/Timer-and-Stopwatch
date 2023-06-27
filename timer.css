@@ -1,0 +1,111 @@
+* {
+  margin: 0; 
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto;
+  font-weight: 300;
+  background: linear-gradient(to left, #635bfc, #8fcff0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+#container{
+  border:1px solid #fff;
+  border-radius :20px;
+  width:400px;
+  margin:20px auto;
+  padding:20px;
+  text-align:center;
+  background :#fff ;
+}
+
+#timer{ 
+  color:#635bfc; 
+  font-size:50px; 
+  margin:10px auto;
+  border : 5px solid#635bfc ;
+  border-radius:50%;
+  width:200px;
+  height:200px;
+  overflow:hidden;
+  position:relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+}
+
+
+#time{
+  margin-top:70px;
+  z-index : 1;
+  position:relative;
+  color: #000;
+}
+
+p {
+  font-weight: 400;
+  color: gray;
+  padding: 30px 0;
+}
+
+.option a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+}
+#buttons button { 
+  background:#8fcff0; 
+  border:none; 
+  color:#fff; 
+  cursor:pointer; 
+  padding:5px; 
+  width:90px; 
+  margin:10px auto;
+  font-size:14px;
+  height : 50px;
+  border-radius : 50px;
+}
+
+#buttons button#shortBreak{
+  background :#8fcff0;
+}
+
+#buttons button#longBreak{
+  background :#8fcff0;
+}
+
+#buttons button#stop{
+  background :#8fcff0 ;
+}
+
+
+
+/* Circle Animation */
+#timer svg {
+  position:absolute;
+  left: 0;
+}
+
+.defaultCircle {
+  opacity: 0.3;
+}
+
+#filler.addAnimation {
+  stroke-dasharray: 770;
+  stroke-dashoffset: -770;
+  animation: animateCircle 60s linear infinite;
+  animation-play-state: paused;
+}
+
+@keyframes animateCircle {
+  from {
+      stroke-dashoffset: 0;
+  }
+}
+
